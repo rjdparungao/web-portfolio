@@ -19,7 +19,7 @@ function AboutCard() {
       </p>
       <ul className="list-disc list-inside text-gray-700 space-y-2">
         <li>💻 Backend Developer</li>
-        <li>🌐 Web Developer</li>
+        <li>🌐 Frontend Developer</li>
         <li>🎓 Lifelong Learner</li>
         <li>🚀 Passionate about clean code</li>
       </ul>

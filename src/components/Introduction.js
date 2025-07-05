@@ -8,18 +8,19 @@ import PostCard from './PostCard';
 import Tabs from './Tabs';
 
 function Introduction() {
-  const [activeTab, setActiveTab] = useState('Posts');
+  const [activeTab, setActiveTab] = useState('About Me');
 
   return (
     <section id="home" className="bg-gray-100 font-poppins min-h-screen pb-10">
 
-      {/* Cover Photo */}
+      {/* Responsive Cover Photo */}
       <motion.div 
-        className="w-full h-56 bg-blue-100"
+        className="w-full h-24 sm:h-32 md:h-40 bg-blue-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       ></motion.div>
+
 
       {/* Profile Info */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 px-4 md:px-6 mt-[-8rem]">
@@ -45,11 +46,13 @@ function Introduction() {
           <TypeAnimation
             sequence={[
               'Aspiring Backend Developer',
-              2000,
-              'Web Developer',
-              2000,
+              3000,
+              'Aspiring Frontend Developer',
+              3000,
+              'Highly Dedicated',
+              3000,
               'Lifelong Learner',
-              2000,
+              3000,
             ]}
             wrapper="span"
             speed={50}
@@ -71,7 +74,7 @@ function Introduction() {
         )}
 
         {activeTab === 'Education' && (
-          <div className="w-full lg:w-2/3 space-y-6">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 px-4 md:px-6 mt-8">
             <PostCard
               title="🎓 Education"
               description="BS in Information Technology - 4th Year Student"

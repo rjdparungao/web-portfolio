@@ -4,7 +4,7 @@ import React from 'react';
 function Header() {
   return (
     <header className="bg-gray-800 text-white shadow-md">
-    <div className="flex justify-center items-center max-w-7xl mx-auto px-8 py-5">
+    <div className="flex justify-center items-center max-w-7xl mx-auto px-4 py-5">
         <nav className="space-x-12 flex">
         <a href="#home" className="hover:underline">Home</a>
         <a href="#about" className="hover:underline">About</a>

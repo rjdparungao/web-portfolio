@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Tabs({ activeTab, setActiveTab }) {
-  const tabs = ['About Me', 'Education', 'Experience', 'Certification', 'Projects'];
+  const tabs = ['About Me', 'Education', 'Experience', 'Certifications', 'Projects'];
 
   return (
     <div className="mt-8 px-4 md:px-6 border-b border-gray-300">
