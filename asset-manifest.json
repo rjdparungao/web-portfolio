@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.a5215c7e.css",
-    "main.js": "/web-portfolio/static/js/main.d723f7c8.js",
+    "main.css": "/web-portfolio/static/css/main.9a28c8d4.css",
+    "main.js": "/web-portfolio/static/js/main.6aff0a08.js",
     "static/media/profile.jpg": "/web-portfolio/static/media/profile.0b23e29ab271bab3fe56.jpg",
+    "static/media/laravel-3.svg": "/web-portfolio/static/media/laravel-3.a6ef806d9714fee5943bd65efe9b8af5.svg",
+    "static/media/django-icon.svg": "/web-portfolio/static/media/django-icon.b062878ade3e5d6fdd56c82c5a1ca0ca.svg",
     "index.html": "/web-portfolio/index.html",
-    "main.a5215c7e.css.map": "/web-portfolio/static/css/main.a5215c7e.css.map",
-    "main.d723f7c8.js.map": "/web-portfolio/static/js/main.d723f7c8.js.map"
+    "static/media/rest-api.svg": "/web-portfolio/static/media/rest-api.5eb4e79ad935c70a84f76cdee7056be0.svg",
+    "main.9a28c8d4.css.map": "/web-portfolio/static/css/main.9a28c8d4.css.map",
+    "main.6aff0a08.js.map": "/web-portfolio/static/js/main.6aff0a08.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5215c7e.css",
-    "static/js/main.d723f7c8.js"
+    "static/css/main.9a28c8d4.css",
+    "static/js/main.6aff0a08.js"
   ]
 }
