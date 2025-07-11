@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import profileImage from '../assets/profile.jpg';
 
-function Card({ title = "", description = "", audience = 'Public', date = 'Just now', delay = 0 }) {
+function Card({ title, description, date, audience, delay = 0, icon = null }) {
   return (
     <motion.div
       className="bg-white p-6 rounded-lg shadow-md"
@@ -12,32 +12,23 @@ function Card({ title = "", description = "", audience = 'Public', date = 'Just 
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
     >
-      {/* Post Header */}
-      <div className="flex items-center mb-4">
-        <img
-          src={profileImage}
-          alt="Profile"
-          className="w-12 h-12 rounded-full object-cover mr-4 border"
-        />
+      <div className="flex items-center gap-4 mb-3">
+        {icon && (
+          <img 
+            src={icon} 
+            alt="Logo" 
+            className="w-12 h-12 object-cover rounded-full" 
+          />
+        )}
         <div>
-          <h3 className="font-bold text-gray-800">Rafael Parungao</h3>
-          <div className="flex items-center text-gray-500 text-sm space-x-2">
-            <span>{audience}</span>
-            <span>•</span>
-            <span>{date}</span>
-          </div>
+          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
+          <p className="text-sm text-gray-500">{date} • {audience}</p>
         </div>
       </div>
-
-      {/* Post Body */}
-      <div>
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">{title}</h2>
-        <div className="text-gray-700 mt-3 leading-loose">
-          {description}
-        </div>
-      </div>
+      <p className="text-gray-600">{description}</p>
     </motion.div>
   );
 }
+
 
 export default Card;
