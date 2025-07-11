@@ -6,6 +6,7 @@ import { IconContext } from 'react-icons';
 import profileImage from '../assets/profile.jpg';
 import pupLogo from '../assets/schools/pup-logo.png';
 import feulogo from '../assets/schools/feulogo.png';
+import srglogo from '../assets/srg-logo.png';
 
 import SocialLinks from './SocialLinks';
 import Card from './Card';
@@ -16,6 +17,7 @@ import {
   SiJavascript, SiJquery, SiDocker, SiWordpress, SiReact, SiTailwindcss, SiGithubactions, SiAxios
 } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
+import { div } from 'framer-motion/client';
 
 const technologies = [
   { name: 'Python Django', icon: <SiDjango /> },
@@ -156,7 +158,7 @@ function Introduction() {
                   <>
                     <p className="font-semibold">Polytechnic University of the Philippines – Quezon City</p>
                     <p>BS in Information Technology</p>
-                    <p className="text-sm text-gray-500">2019 – Present</p>
+                    <p className="text-sm text-gray-500">2019 – Present | Graduation Date: October 2025</p>
                   </>
                 }
                 audience="Public"
@@ -180,6 +182,57 @@ function Introduction() {
                 delay={0.4}
               />
             </div>
+          )}
+
+          {activeTab === 'Experience' && (
+
+            <div className="space-y-6">
+              <Card
+              title="PUP Quezon City"
+              icon={pupLogo}
+              audience="Public"
+              date="July 3, 2025"
+              delay={0.2}
+              description={
+                <>
+                  <p className="font-semibold">Fullstack Software Developer - Internship</p>
+                  <p>February 2025 – June 2025</p>
+                  <p className="text-sm text-gray-500 mt-2">Developed and maintained dynamic web applications using Python Django, PHP Laravel, and ReactJS. Led the integration of CI/CD workflows and implemented scalable RESTful APIs to streamline deployment and enhance system performance. Collaborated closely with frontend and backend teams to deliver full-stack solutions aligned with business goals.</p>
+                </>
+              }
+              />
+
+              <Card
+              title="Software Research Group"
+              icon={srglogo}
+              audience="Public"
+              date="July 3, 2025"
+              delay={0.4}
+              description={
+                <>
+                  <p className="font-semibold">Lead Developer - External Team</p>
+                  <p>February 2024 – June 2025</p>
+                  <p className="text-sm text-gray-500 mt-2"> Served as Lead Developer for SRG’s external team, working directly with outside clients in real-world project environments. Oversaw planning, delegation, and execution of key initiatives while ensuring alignment with client goals and timelines. Collaborated with core departments to maintain cross-functional coordination, fostered a culture of accountability, and led the team in delivering high-quality solutions. Actively resolved challenges, communicated with stakeholders, and supported project continuity from concept to deployment. </p>
+                </>
+              }
+              />
+
+              <Card
+              title="Software Research Group"
+              icon={srglogo}
+              audience="Public"
+              date="July 3, 2025"
+              delay={0.4}
+              description={
+                <>
+                  <p className="font-semibold">Assistant Overall Lead</p>
+                  <p>February 2024 – June 2025</p>
+                  <p className="text-sm text-gray-500 mt-2">Collaborated with core teams to ensure seamless coordination across multiple departments. I played a key role in planning, delegating, and executing high-impact initiatives, stepping up to lead when needed and ensuring deliverables were met on time. My leadership focused on supporting the overall vision while driving team productivity, resolving conflicts, and maintaining strong communication among stakeholders.</p>
+                </>
+              }
+              />
+            </div>
+
           )}
         </div>
       </div>
