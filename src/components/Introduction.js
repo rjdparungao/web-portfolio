@@ -7,6 +7,13 @@ import profileImage from '../assets/profile.jpg';
 import pupLogo from '../assets/schools/pup-logo.png';
 import feulogo from '../assets/schools/feulogo.png';
 import srglogo from '../assets/srg-logo.png';
+import fortinetLogo from '../assets/certifications/fortinet.png';
+import mablLogo from '../assets/certifications/mabl.jpg';
+import soloLearnLogo from '../assets/certifications/solo-learn.png';
+
+import gunifyLandingPage from '../assets/projects/gunify/gunify-landingpage.png';
+import alpsLandingPage from '../assets/projects/alps/alps-calendar.png';
+import dalayLandingPage from '../assets/projects/dalay/dalay-login.png';
 
 import SocialLinks from './SocialLinks';
 import Card from './Card';
@@ -14,10 +21,11 @@ import Tabs from './Tabs';
 
 import {
   SiDjango, SiLaravel, SiMysql, SiPostgresql, SiGithub, SiBootstrap, SiPostman,
-  SiJavascript, SiJquery, SiDocker, SiWordpress, SiReact, SiTailwindcss, SiGithubactions, SiAxios
+  SiJavascript, SiJquery, SiDocker, SiWordpress, SiReact, SiTailwindcss, SiGithubactions, SiAxios,
+  SiHostinger
 } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
-import { div } from 'framer-motion/client';
+import { div, h3 } from 'framer-motion/client';
 
 const technologies = [
   { name: 'Python Django', icon: <SiDjango /> },
@@ -234,6 +242,215 @@ function Introduction() {
             </div>
 
           )}
+
+          {activeTab === 'Certifications' && (
+            <div className="space-y-6">
+
+              <Card
+                title="Fortinet Certified Fundamentals in Cybersecurity"
+                description={
+                  <>
+                    <p className="font-semibold">Fortinet</p>
+                    <p>Credential ID: 2761837082RP</p>
+                    <p className="text-sm text-gray-500">Issued: Jul 2024 · Expires: Jul 2026</p>
+                  </>
+                }
+                audience="Public"
+                date="July 3, 2025"
+                icon={fortinetLogo} // Replace or use a local asset
+                delay={0.2}
+              />
+
+              <Card
+                title="mabl Skills Certification: Foundations"
+                description={
+                  <>
+                    <p className="font-semibold">mabl</p>
+                    <p>Credential ID: pxxo9ogohkgv</p>
+                    <p className="text-sm text-gray-500">Issued: May 2024</p>
+                  </>
+                }
+                audience="Public"
+                date="July 3, 2025"
+                icon={mablLogo} // Replace with local asset if needed
+                delay={0.3}
+              />
+
+              <Card
+                title="PHP Fundamentals"
+                description={
+                  <>
+                    <p className="font-semibold">Sololearn</p>
+                    <p>Credential ID: CT-JGUOYXO8</p>
+                    <p className="text-sm text-gray-500">Issued: Oct 2022</p>
+                  </>
+                }
+                audience="Public"
+                date="July 3, 2025"
+                icon={soloLearnLogo} // Optional, replace with local if desired
+                delay={0.4}
+              />
+
+              <Card
+                title="Web Development Fundamentals"
+                description={
+                  <>
+                    <p className="font-semibold">Sololearn</p>
+                    <p>Credential ID: CT-OCNQ9IGG</p>
+                    <p className="text-sm text-gray-500">Issued: Sep 2022</p>
+                  </>
+                }
+                audience="Public"
+                date="July 3, 2025"
+                icon={soloLearnLogo}
+                delay={0.5}
+              />
+
+            </div>
+          )}
+
+          {activeTab === 'Projects' && (
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+              <Card
+                title="ALPS Calendar"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Developed a dynamic calendar system for ALPS to schedule trainings, assign facilitators and clients, and manage facilitator unavailability — enhancing coordination and efficiency
+                      </p>
+
+                      <a
+                        href="https://alpscalendar.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={alpsLandingPage} 
+                          alt="ALPS Calendar Screenshot" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Visit Project</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiLaravel title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiPostman title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="Public"
+                date="October 2024 - February 2025"
+                icon={profileImage}
+                delay={0.2}
+              />
+
+
+              <Card
+                title="GUnify Information System"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Built Gunify Information System — a modular platform combining event, member, finance, and web portal management through scalable microservices for seamless operations.
+                      </p>
+
+                      <a
+                        href="http://portal.gfmic.ph"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={gunifyLandingPage} 
+                          alt="GUnify Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Visit Project</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiDjango title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiDocker title="Docker"/>
+                      <SiPostman title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="Public"
+                date="July 2024 - March 2025"
+                icon={profileImage}
+                delay={0.2}
+              />
+
+              <Card
+                title="DALAY"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Created DALAY, a barangay management system with vaccine tracking and a forecasting algorithm — improving health service planning and distribution efficiency.
+                      </p>
+
+                      <a
+                        href="https://trial-dalay.gfmic.ph/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={dalayLandingPage} 
+                          alt="DALAY Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Visit Project</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiLaravel title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiPostman title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="Public"
+                date="July 2024 - March 2025"
+                icon={profileImage}
+                delay={0.2}
+              />
+
+           </div>
+
+          )}
+
         </div>
       </div>
     </section>
