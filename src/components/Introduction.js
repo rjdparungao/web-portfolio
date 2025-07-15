@@ -19,10 +19,10 @@ import bitboLoginPage from '../assets/projects/bitbo/bitbo-login.png';
 import eventLandingPage from '../assets/projects/gunify/gunify-event.png';
 import financeLandingPage from '../assets/projects/gunify/gunify-finance.png';
 
-
 import SocialLinks from './SocialLinks';
 import Card from './Card';
 import Tabs from './Tabs';
+import LazyImage from './LazyImage';
 
 import {
   SiDjango, SiLaravel, SiMysql, SiPostgresql, SiGithub, SiBootstrap, SiPostman,
@@ -315,8 +315,7 @@ function Introduction() {
           )}
 
           {activeTab === 'Projects' && (
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               <Card
                 title="ALPS Calendar"
@@ -326,25 +325,22 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Developed a dynamic calendar system for ALPS to schedule trainings, assign facilitators and clients, and manage facilitator unavailability — enhancing coordination and efficiency
                       </p>
-
                       <a
                         href="https://alpscalendar.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group block mb-4"
                       >
-                        <img 
-                          src={alpsLandingPage} 
-                          alt="ALPS Calendar Screenshot" 
+                        <LazyImage 
+                          src={alpsLandingPage}
+                          alt="ALPS Calendar Screenshot"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Visit Project</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiLaravel title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -363,7 +359,6 @@ function Introduction() {
                 delay={0.2}
               />
 
-
               <Card
                 title="GUnify Information System"
                 description={
@@ -372,25 +367,22 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Built Gunify Information System — a modular platform combining event, member, finance, and web portal management through scalable microservices for seamless operations.
                       </p>
-
                       <a
                         href="http://portal.gfmic.ph"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group block mb-4"
                       >
-                        <img 
-                          src={gunifyLandingPage} 
-                          alt="GUnify Landing Page" 
+                        <LazyImage 
+                          src={gunifyLandingPage}
+                          alt="GUnify Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Visit Project</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiDjango title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -418,25 +410,22 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Created DALAY, a barangay management system with vaccine tracking and a forecasting algorithm — improving health service planning and distribution efficiency.
                       </p>
-
                       <a
                         href="https://trial-dalay.gfmic.ph/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group block mb-4"
                       >
-                        <img 
-                          src={dalayLandingPage} 
-                          alt="DALAY Landing Page" 
+                        <LazyImage 
+                          src={dalayLandingPage}
+                          alt="DALAY Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Visit Project</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiLaravel title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -456,32 +445,24 @@ function Introduction() {
               />
 
               <Card
-                title={
-                  <span className="text-sm">Collection Report Generator System</span>
-                }
+                title={<span className="text-sm">Collection Report Generator System</span>}
                 description={
                   <div className="flex flex-col justify-between h-full">
                     <div>
                       <p className="mb-4 text-sm text-gray-700">
                         Built CRGS, a collection and deposit tracking system with receipt printing and automated report generation — streamlining daily financial operations for the institution.
                       </p>
-
-                      <a
-                        href="#"
-                        className="relative group block mb-4"
-                      >
-                        <img 
-                          src={crgsLoginPage} 
-                          alt="DALAY Landing Page" 
+                      <a href="#" className="relative group block mb-4">
+                        <LazyImage 
+                          src={crgsLoginPage}
+                          alt="CRGS Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Deployed Within The Institution</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiPhp title="Php" />
                       <SiBootstrap title="Bootstrap" />
@@ -497,7 +478,6 @@ function Introduction() {
                 delay={0.8}
               />
 
-
               <Card
                 title="BitBo"
                 description={
@@ -506,24 +486,17 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Developed BitBo, a barangay management system for tracking residents, blotters, ordinances, and certifications — streamlining operations and improving records and reporting.
                       </p>
-
-
-                      <a
-                        href="#"
-                        className="relative group block mb-4"
-                      >
-                        <img 
-                          src={bitboLoginPage} 
-                          alt="DALAY Landing Page" 
+                      <a href="#" className="relative group block mb-4">
+                        <LazyImage 
+                          src={bitboLoginPage}
+                          alt="BitBo Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Deployed Within The Institution</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiLaravel title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -542,7 +515,6 @@ function Introduction() {
                 delay={1.0}
               />
 
-
               <Card
                 title="GUnify Event Module V2"
                 description={
@@ -551,25 +523,22 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Built Gunify Event Module V2 to manage event posts, speakers, attendees, and waitlists — streamlining event flow and automating certificate generation.
                       </p>
-
                       <a
                         href="http://event.gfmic.ph/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group block mb-4"
                       >
-                        <img 
-                          src={eventLandingPage} 
-                          alt="DALAY Landing Page" 
+                        <LazyImage 
+                          src={eventLandingPage}
+                          alt="Event Module Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Visit Project</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiDjango title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -597,25 +566,22 @@ function Introduction() {
                       <p className="mb-4 text-sm text-gray-700">
                         Developed Gunify Finance Module V2 to manage collections from events and memberships — automating revenue tracking and financial report generation.
                       </p>
-
                       <a
                         href="http://finance.gfmic.ph/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group block mb-4"
                       >
-                        <img 
-                          src={financeLandingPage} 
-                          alt="DALAY Landing Page" 
+                        <LazyImage 
+                          src={financeLandingPage}
+                          alt="Finance Module Landing Page"
                           className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
                         />
-                        {/* Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
                           <span className="text-white font-semibold text-lg">Visit Project</span>
                         </div>
                       </a>
                     </div>
-
                     <div className="flex gap-3 text-xl text-gray-600">
                       <SiDjango title="Laravel" />
                       <SiBootstrap title="Bootstrap" />
@@ -635,10 +601,7 @@ function Introduction() {
                 delay={1.4}
               />
 
-              
-
-           </div>
-
+            </div>
           )}
 
         </div>
