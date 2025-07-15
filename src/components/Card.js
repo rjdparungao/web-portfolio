@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import profileImage from '../assets/profile.jpg';
 
 function Card({ title, description, date, audience, delay = 0, icon = null }) {
   return (
@@ -21,7 +20,7 @@ function Card({ title, description, date, audience, delay = 0, icon = null }) {
           />
         )}
         <div>
-          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
+          <h2 className="text-lg font-bold text-gray-800">{title}</h2>
           <p className="text-sm text-gray-500">{date} • {audience}</p>
         </div>
       </div>

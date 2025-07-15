@@ -14,6 +14,11 @@ import soloLearnLogo from '../assets/certifications/solo-learn.png';
 import gunifyLandingPage from '../assets/projects/gunify/gunify-landingpage.png';
 import alpsLandingPage from '../assets/projects/alps/alps-calendar.png';
 import dalayLandingPage from '../assets/projects/dalay/dalay-login.png';
+import crgsLoginPage from '../assets/projects/crgs/crgs-login.jpg';
+import bitboLoginPage from '../assets/projects/bitbo/bitbo-login.png';
+import eventLandingPage from '../assets/projects/gunify/gunify-event.png';
+import financeLandingPage from '../assets/projects/gunify/gunify-finance.png';
+
 
 import SocialLinks from './SocialLinks';
 import Card from './Card';
@@ -22,10 +27,10 @@ import Tabs from './Tabs';
 import {
   SiDjango, SiLaravel, SiMysql, SiPostgresql, SiGithub, SiBootstrap, SiPostman,
   SiJavascript, SiJquery, SiDocker, SiWordpress, SiReact, SiTailwindcss, SiGithubactions, SiAxios,
-  SiHostinger
+  SiHostinger,
+  SiPhp
 } from 'react-icons/si';
 import { FaServer } from 'react-icons/fa';
-import { div, h3 } from 'framer-motion/client';
 
 const technologies = [
   { name: 'Python Django', icon: <SiDjango /> },
@@ -348,10 +353,11 @@ function Introduction() {
                       <SiHostinger title="Hostinger" />
                       <SiJquery title="Jquery" />
                       <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
                     </div>
                   </div>
                 }
-                audience="Public"
+                audience="ALPS"
                 date="October 2024 - February 2025"
                 icon={profileImage}
                 delay={0.2}
@@ -394,13 +400,14 @@ function Introduction() {
                       <SiJquery title="Jquery" />
                       <SiDocker title="Docker"/>
                       <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
                     </div>
                   </div>
                 }
-                audience="Public"
+                audience="GFMIC"
                 date="July 2024 - March 2025"
                 icon={profileImage}
-                delay={0.2}
+                delay={0.4}
               />
 
               <Card
@@ -438,14 +445,197 @@ function Introduction() {
                       <SiHostinger title="Hostinger" />
                       <SiJquery title="Jquery" />
                       <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
                     </div>
                   </div>
                 }
-                audience="Public"
-                date="July 2024 - March 2025"
+                audience="GFMIC"
+                date="February 2023 - February 2025"
                 icon={profileImage}
-                delay={0.2}
+                delay={0.6}
               />
+
+              <Card
+                title={
+                  <span className="text-sm">Collection Report Generator System</span>
+                }
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Built CRGS, a collection and deposit tracking system with receipt printing and automated report generation — streamlining daily financial operations for the institution.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={crgsLoginPage} 
+                          alt="DALAY Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Deployed Within The Institution</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiPhp title="Php" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiMysql title="MySQL" />
+                      <SiJquery title="Jquery" />
+                      <SiGithub title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="PUPQC"
+                date="March 2025 - June 2025"
+                icon={profileImage}
+                delay={0.8}
+              />
+
+
+              <Card
+                title="BitBo"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Developed BitBo, a barangay management system for tracking residents, blotters, ordinances, and certifications — streamlining operations and improving records and reporting.
+                      </p>
+
+
+                      <a
+                        href="#"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={bitboLoginPage} 
+                          alt="DALAY Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Deployed Within The Institution</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiLaravel title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="GFMIC"
+                date="February 2023 - February 2025"
+                icon={profileImage}
+                delay={1.0}
+              />
+
+
+              <Card
+                title="GUnify Event Module V2"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Built Gunify Event Module V2 to manage event posts, speakers, attendees, and waitlists — streamlining event flow and automating certificate generation.
+                      </p>
+
+                      <a
+                        href="http://event.gfmic.ph/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={eventLandingPage} 
+                          alt="DALAY Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Visit Project</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiDjango title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiDocker title="Docker"/>
+                      <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="GFMIC"
+                date="February 2023 - February 2025"
+                icon={profileImage}
+                delay={1.2}
+              />
+
+              <Card
+                title="GUnify Finance Module V2"
+                description={
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <p className="mb-4 text-sm text-gray-700">
+                        Developed Gunify Finance Module V2 to manage collections from events and memberships — automating revenue tracking and financial report generation.
+                      </p>
+
+                      <a
+                        href="http://finance.gfmic.ph/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group block mb-4"
+                      >
+                        <img 
+                          src={financeLandingPage} 
+                          alt="DALAY Landing Page" 
+                          className="w-full h-48 object-cover rounded-lg shadow-lg transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg">Visit Project</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="flex gap-3 text-xl text-gray-600">
+                      <SiDjango title="Laravel" />
+                      <SiBootstrap title="Bootstrap" />
+                      <SiGithubactions title="Github Actions" />
+                      <SiMysql title="MySQL" />
+                      <SiHostinger title="Hostinger" />
+                      <SiJquery title="Jquery" />
+                      <SiDocker title="Docker"/>
+                      <SiPostman title="Postman" />
+                      <SiGithub title="Postman" />
+                    </div>
+                  </div>
+                }
+                audience="GFMIC"
+                date="February 2023 - February 2025"
+                icon={profileImage}
+                delay={1.4}
+              />
+
+              
 
            </div>
 
