@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.d0f8aaf3.css",
-    "main.js": "/web-portfolio/static/js/main.c0d00302.js",
+    "main.css": "/web-portfolio/static/css/main.c2d92e09.css",
+    "main.js": "/web-portfolio/static/js/main.33e5df3d.js",
     "static/media/gunify-landingpage.png": "/web-portfolio/static/media/gunify-landingpage.a047b3110efbc8bbe2ee.png",
     "static/media/srg-logo.png": "/web-portfolio/static/media/srg-logo.f1d1241bb9ddc8ef3409.png",
     "static/media/alps-calendar.png": "/web-portfolio/static/media/alps-calendar.29ed3c61434abc01b6ef.png",
@@ -15,11 +15,11 @@
     "static/media/solo-learn.png": "/web-portfolio/static/media/solo-learn.51f70cd0566ba8fb608e.png",
     "static/media/feulogo.png": "/web-portfolio/static/media/feulogo.996c392021bdc8dcb340.png",
     "index.html": "/web-portfolio/index.html",
-    "main.d0f8aaf3.css.map": "/web-portfolio/static/css/main.d0f8aaf3.css.map",
-    "main.c0d00302.js.map": "/web-portfolio/static/js/main.c0d00302.js.map"
+    "main.c2d92e09.css.map": "/web-portfolio/static/css/main.c2d92e09.css.map",
+    "main.33e5df3d.js.map": "/web-portfolio/static/js/main.33e5df3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0f8aaf3.css",
-    "static/js/main.c0d00302.js"
+    "static/css/main.c2d92e09.css",
+    "static/js/main.33e5df3d.js"
   ]
 }
