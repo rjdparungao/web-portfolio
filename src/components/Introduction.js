@@ -23,6 +23,7 @@ import SocialLinks from './SocialLinks';
 import Card from './Card';
 import Tabs from './Tabs';
 import LazyImage from './LazyImage';
+import Cover from './Cover';
 
 import {
   SiDjango, SiLaravel, SiMysql, SiPostgresql, SiGithub, SiBootstrap, SiPostman,
@@ -56,32 +57,31 @@ function Introduction() {
 
   return (
     <section id="home" className="bg-gray-100 font-poppins min-h-screen pb-10">
-      
-      {/* Cover Photo */}
-      <motion.div 
-        className="w-full h-24 sm:h-32 md:h-40 bg-blue-100"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      ></motion.div>
+      {/* Cover Section */}
+      <Cover />
 
-      {/* Profile Info */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-10 pt-6 md:pt-0 relative z-10">
+      {/* Profile Section */}
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+
           {/* Profile Image */}
-          <motion.img 
-            src={profileImage}
-            alt="Profile"
-            className="w-28 h-28 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full border-4 border-white shadow-lg object-cover -mt-14 md:-mt-28"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          />
+          <div className="relative">
+            <motion.img 
+              src={profileImage}
+              alt="Profile"
+              className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full border-4 border-white shadow-lg object-cover absolute -top-14 sm:-top-16 md:-top-20 z-20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            />
+            {/* Empty spacer to preserve layout height */}
+            <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52"></div>
+          </div>
 
-          {/* Info */}
-          <div className="text-center md:text-left flex flex-col items-center md:items-start">
+          {/* Profile Info */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left pt-4 md:pt-0">
             <motion.h1 
-              className="text-2xl sm:text-3xl md:text-5xl md:-mt-0 sm:-mt-0 font-bold text-gray-800"
+              className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -110,9 +110,9 @@ function Introduction() {
               <SocialLinks />
             </div>
           </div>
+
         </div>
       </div>
-
 
       {/* Tabs */}
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
